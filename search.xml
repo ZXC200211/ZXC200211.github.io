@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Ubuntu下用户的添加，切换和删除方法</title>
+      <link href="/2022/08/19/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2022/08/19/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Ubuntu添加用户"><a href="#Ubuntu添加用户" class="headerlink" title="Ubuntu添加用户"></a>Ubuntu添加用户</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo useradd +username  (useradd命令需要高管权限) </span><br></pre></td></tr></table></figure><p>输入验证密码：<br><img src="https://img-blog.csdnimg.cn/0fe7552e929d4170b031e7c1eab3e38c.png#pic_center"><br> <strong>用户jack1创建成功，通过cat命令来查看新建用户(一般最后一个即为所创建用户)</strong></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cat etc/passwd</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/9ddf5602bd784cca9fcc6a306ae1f55e.png#pic_center"><br> <strong>用户创建完成后需要设置密码来激活，否则所建用户无法登录</strong><br><img src="https://img-blog.csdnimg.cn/a0be2341d2404a4fbc8800339aa315b3.png#pic_center"><br><strong>创建密码</strong></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/992cc6e6c950492089573d9ad5e235d6.png#pic_center"><br>Ubuntu下如果只是运行useradd+username的话，它会创建一个三无用户，即：无用户家目录，无指定shell版本（shell是用来解析命令的，它接收用户命令，然后调用相应程序执行），无密码。<br>useradd常用的几个参数<br>-m 自动生成家目录<br>-s  指定用户登入后所使用的shell；如果不设定的话，默认是&#x2F;bin&#x2F;sh<br>-g  指定用户所属的群组；</p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo useradd -m -s /bin/bash jack2</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/18d42f75950049cb926cbd23bf3a784f.png#pic_center"></p><p><img src="https://img-blog.csdnimg.cn/3b20b8a1fcc84598a534313110ad7380.png"><br><strong>通过以上命令创建的用户jack2有家目录，shell版本为bash</strong></p><h1 id="用户切换"><a href="#用户切换" class="headerlink" title="用户切换"></a>用户切换</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">su username </span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/3d9a9f1140844f23b934fc85a857a6b7.png"></p><h2 id="关于切换root用户提示认证失败的解决方法可查看这篇文章Ubuntu下切换root用户认证失败解决方案"><a href="#关于切换root用户提示认证失败的解决方法可查看这篇文章Ubuntu下切换root用户认证失败解决方案" class="headerlink" title="关于切换root用户提示认证失败的解决方法可查看这篇文章Ubuntu下切换root用户认证失败解决方案"></a><strong>关于切换root用户提示认证失败的解决方法可查看这篇文章</strong><a href="https://blog.csdn.net/m0_56437446/article/details/126187387">Ubuntu下切换root用户认证失败解决方案</a></h2><h1 id="用户的删除"><a href="#用户的删除" class="headerlink" title="用户的删除"></a>用户的删除</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">**sudo userdel username**</span><br></pre></td></tr></table></figure><p>常用参数<br>-r 可以删除家目录<br>-f 强制删除（不论用户是否处在登录状态都会被删除）</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>演示</title>
+      <link href="/2022/08/12/%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E5%9D%97/"/>
+      <url>/2022/08/12/%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E5%9D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>介绍</p><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>客户端 </p><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p> 客户端（Client）也叫用户端，指的是普通用户使用的终端，客户端有多种形式，比如最常用的就是浏览器、app等，而web开发最主要的客户端形式还是浏览器。</p><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><p> 标签</p><h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><p>标记：又叫做标签（HTML tag），有特殊的书写规范，是写给浏览器的一种语法格式，结合普通的文字信息，实现特殊的语义或显示内容。在编辑器中可以编辑和查看，在浏览器中不显示。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
